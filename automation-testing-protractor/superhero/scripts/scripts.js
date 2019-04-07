@@ -1,4 +1,4 @@
-$( "#addHero-form" ).submit(function( event ) {
+$("#addHero-form").submit(function(event) {
 
   $("#addHero-Alert").addClass("hide")
 
@@ -16,7 +16,7 @@ $( "#addHero-form" ).submit(function( event ) {
   event.preventDefault();
 });
 
-$( "#vote-form" ).submit(function( event ) {
+$("#vote-form").submit(function(event) {
 
   var movie1Votes = $("#movieVotes1").text()
   var movie2Votes = $("#movieVotes2").text()
@@ -51,6 +51,25 @@ $( "#vote-form" ).submit(function( event ) {
 
     movie5Votes = parseInt(movie5Votes) + 1
     $("#movieVotes5").text(movie5Votes)
+
+  }
+
+  event.preventDefault();
+});
+
+$("#search-form").submit(function(event) {
+
+  if ($("#search-box").val() == '') {
+
+    // do nothing
+
+  } else if ($("#search-box").val().toLowerCase() == "captain america") {
+
+    alert("Captain America is awesome!")
+
+  } else {
+
+    alert("Your search for " + $("#search-box").val() + " returned 0 results.  Try something else.")
 
   }
 
