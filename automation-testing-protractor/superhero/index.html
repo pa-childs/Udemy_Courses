@@ -36,6 +36,11 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+
+          <div id="login-alert" class="alert alert-danger hide" role="alert">
+            Both an email and password are required.
+          </div>
+
         </div>
       </div>
 
@@ -66,7 +71,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+                <a class="nav-link" href="#" onclick="logout()">Logout</a>
               </li>
             </ul>
             <form id="search-form" class="form-inline my-2 my-lg-0">

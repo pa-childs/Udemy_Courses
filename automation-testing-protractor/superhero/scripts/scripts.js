@@ -75,3 +75,40 @@ $("#search-form").submit(function(event) {
 
   event.preventDefault();
 });
+
+$("#form-login").submit(function(event) {
+
+  $("#login-alert").addClass("hide")
+
+  if ($("#loginEmail").val() == "" || $("#loginPassword").val() == "") {
+
+    $("#login-alert").removeClass("hide")
+
+  } else {
+
+    if ($("#rememberLoginCheck").is(":checked")) {
+
+      var email = $("#loginEmail").text()
+      var password = $("#loginPassword").text()
+
+    } else {
+
+      $("#loginEmail").val("")
+      $("#loginPassword").val("")
+
+    }
+
+    $("#overlay").addClass("hide")
+
+  }
+
+  event.preventDefault();
+});
+
+function logout() {
+
+  $("#overlay").removeClass("hide")
+  $("#loginEmail").val(email)
+  $("#loginEmail").val(password)
+
+}
