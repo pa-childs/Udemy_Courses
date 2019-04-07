@@ -114,9 +114,9 @@
       <div class="row justify-content-md-center">
         <div class="col-9">
           <ul id="hero-list" class="list-group">
-            <li class="list-group-item">Wolverine</li>
-            <li class="list-group-item">Ironman</li>
-            <li class="list-group-item">Deadpool</li>
+            <li class="list-group-item">Captain America</li>
+            <li class="list-group-item">Black Widow</li>
+            <li class="list-group-item">Vision</li>
             <li class="list-group-item">Thor</li>
             <li class="list-group-item">Spider-Man</li>
           </ul>
@@ -140,34 +140,34 @@
       <div class="row justify-content-md-center">
         <div class="col-9">
           <h4>Vote for your favorite Superhero movie:</h4>
-          <form>
+          <form id="vote-form">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-              <label class="form-check-label" for="exampleRadios1">
-                X-Men
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadios1" value="option1">
+              <label class="form-check-label" for="heroMovieRadios1">
+                Captain Americe: The First Avenger
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-              <label class="form-check-label" for="exampleRadios2">
-                Avengers
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadios2" value="option2">
+              <label class="form-check-label" for="heroMovieRadios2">
+                The Avengers
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-              <label class="form-check-label" for="exampleRadios3">
-                Deadpool
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadios3" value="option3">
+              <label class="form-check-label" for="heroMovieRadios3">
+                Guardians of the Galaxy
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
-              <label class="form-check-label" for="exampleRadios2">
-                Spider-Man Homecoming
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadios4" value="option4">
+              <label class="form-check-label" for="heroMovieRadios4">
+                Spider-Man: Homecoming
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option5">
-              <label class="form-check-label" for="exampleRadios3">
+              <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadios5" value="option5">
+              <label class="form-check-label" for="heroMovieRadios5">
                 Thor
               </label>
             </div>
@@ -178,30 +178,30 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Movie</th>
-                <th>Votes</th>
+                <th scope="col">Movie</th>
+                <th scope="col">Votes</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>X-Men</th>
-                <td>4</td>
+                <td id="movieName1">Captain Americe: The First Avenger</td>
+                <td id="movieVotes1">11</td>
               </tr>
               <tr>
-                <th>Avengers</th>
-                <td>10</td>
+                <td id="movieName2">The Avengers</td>
+                <td id="movieVotes2">10</td>
               </tr>
               <tr>
-                <th>Deadpool</th>
-                <td>5</td>
+                <td id="movieName3">Guardians of the Galaxy</td>
+                <td id="movieVotes3">8</td>
               </tr>
               <tr>
-                <th>Spider-Man Homecoming</th>
-                <td>6</td>
+                <td id="movieName4">Spider-Man: Homecoming</td>
+                <td id="movieVotes4">7</td>
               </tr>
               <tr>
-                <th>Thor</th>
-                <td>6</td>
+                <td id="movieName5">Thor</td>
+                <td id="movieVotes5">7</td>
               </tr>
             </tbody>
           </table>
