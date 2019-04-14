@@ -9,7 +9,7 @@ exports.config = {
 	},
 
 	specs: [
-		'./tests/*_spec.js'
+		'./tests/login_spec.js'
 	],
 
 	jasmineNodeOpts: {

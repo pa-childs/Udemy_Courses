@@ -6,7 +6,7 @@ TestPage.prototype = Object.create({}, {
 	emailField: {get: function() { return element(by.id('loginEmail'))}},
 	passwordField: {get: function() { return element(by.id('loginPassword'))}},
 	rememberMeCheckbox: {get: function() { return element(by.id('rememberLoginCheck'))}},
-	submitButton: {get: function() { return element(by.link_text('Submit'))}}
+	submitButton: {get: function() { return element(by.buttonText('Submit'))}}
 
 })
 
