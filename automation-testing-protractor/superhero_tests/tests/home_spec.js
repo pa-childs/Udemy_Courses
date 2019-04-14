@@ -27,6 +27,24 @@ describe('Home Page', function() {
 
 	})
 
+	// Header Section
+	fit('should display all Home Page Header elements', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com')
+		loginPage.passwordField.sendKeys('spiderman')
+		loginPage.submitButton.click()
+
+		// Confirm Header Section
+		expect(homePage.headerTitleText.isDisplayed()).toBe(true)
+		expect(homePage.headerTitleText.getText()).toEqual('Superhero Roster')
+		expect(homePage.headerImage.isDisplayed()).toBe(true)
+		expect(homePage.headerText.isDisplayed()).toBe(true)
+		expect(homePage.headerText.getText()).toEqual('Imagine that your are tasked with building a team of Superheros to save the world. We have given you a few heroes to start with. Add as many heros as you would like to round out your dream team.')
+
+	})
+
+
+	// Roster Section
 	it('should display all Home Page Roster elements', function() {
 
 		loginPage.emailField.sendKeys('stan_lee@marvel.com')
@@ -77,6 +95,7 @@ describe('Home Page', function() {
 
 	})
 
+	// Voting Section
 	it('should display all Home Page Voting elements', function() {
 
 		loginPage.emailField.sendKeys('stan_lee@marvel.com')

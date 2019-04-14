@@ -4,6 +4,11 @@ var HomePage = function () {}
 
 HomePage.prototype = Object.create({}, {
 
+	// Header Section
+	headerTitleText: {get: function() { return element(by.css('body > div.container-fluid > div:nth-child(1) > h1')) } },
+	headerImage: {get: function() { return element(by.css('body > div.container-fluid > div:nth-child(2) > img')) } },
+	headerText: {get: function() { return element(by.css('body > div.container-fluid > div:nth-child(3) > div > p')) } },
+
 	// Roster Section
 	rosterTitleText: {get: function() { return element(by.css('body > div.container-fluid > div:nth-child(4) > h3')) } },
 	heroMember1Text: {get: function() { return element(by.css('#hero-list > li:nth-child(1)')) } },
