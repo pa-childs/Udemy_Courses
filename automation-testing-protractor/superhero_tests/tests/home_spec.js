@@ -16,6 +16,7 @@ describe('Home Page', function() {
 
 		// Need for non-Angular testing
 		browser.ignoreSynchronization = true
+		browser.driver.manage().window().maximize();
 
 		// Open browser and load URL
 		browser.get('file:///C:/Work_Files/Repositories/Udemy_Courses/automation-testing-protractor/superhero/index.html')
