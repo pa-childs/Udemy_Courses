@@ -117,5 +117,39 @@ describe('NavBar Tests', function() {
 	})
 
 	// Search bar
+	it('should display an alert for search that returns no data', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com');
+		loginPage.passwordField.sendKeys('spiderman');
+		loginPage.submitButton.click();
+
+		navBar.searchField.sendKeys('Perry the Platypus');
+		navBar.searchButton.click();
+
+		var EC = protractor.ExpectedConditions;
+		browser.wait(EC.alertIsPresent(), 3000);
+
+		expect(browser.switchTo().alert().getText()).toEqual('Your search for Perry the Platypus returned 0 results.  Try something else.');
+		browser.switchTo().alert().accept();
+		
+	})
+
+	it('should display an alert for search that returns data', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com');
+		loginPage.passwordField.sendKeys('spiderman');
+		loginPage.submitButton.click();
+
+		navBar.searchField.sendKeys('Captain America');
+		navBar.searchButton.click();
+
+		var EC = protractor.ExpectedConditions;
+		browser.wait(EC.alertIsPresent(), 3000);
+
+		expect(browser.switchTo().alert().getText()).toEqual('Captain America is awesome!');
+		browser.switchTo().alert().accept();
+
+		
+	})
 
 })
