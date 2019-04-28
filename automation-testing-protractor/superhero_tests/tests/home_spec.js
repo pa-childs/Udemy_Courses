@@ -4,7 +4,7 @@
 var HomePage = require('../page_objects/home_page.js')
 var LoginPage = require('../page_objects/login_page.js')
 
-describe('Home Page', function() {
+describe('Home Page Tests', function() {
 
 	var homePage
 	var loginPage
