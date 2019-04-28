@@ -4,7 +4,7 @@
 var NavBar = require('../page_objects/navbar.js');
 var LoginPage = require('../page_objects/login_page.js');
 
-describe('NavBar', function() {
+describe('NavBar Tests', function() {
 
 	var navBar;
 	var loginPage;
@@ -28,7 +28,66 @@ describe('NavBar', function() {
 
 	})
 
-	// Logout menu option
+	// Confirm NavBar elements
+	it('should display all Navbar elements', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com');
+		loginPage.passwordField.sendKeys('spiderman');
+		loginPage.submitButton.click();
+
+		expect(navBar.homeLink.isDisplayed()).toBe(true);
+		// expect(navBar.linkLink.isDisplayed()).toBe(true);
+		expect(navBar.heroFactsLink.isDisplayed()).toBe(true);
+		expect(navBar.logoutLink.isDisplayed()).toBe(true);
+
+		navBar.heroFactsLink.click()
+		expect(navBar.wolverineOption.isDisplayed()).toBe(true);
+		expect(navBar.spidermanOption.isDisplayed()).toBe(true);
+
+	})
+
+	// Confirm Hero Facts Modal
+	it('should display and close wolverine modal', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com');
+		loginPage.passwordField.sendKeys('spiderman');
+		loginPage.submitButton.click();
+
+		navBar.heroFactsLink.click();
+		navBar.wolverineOption.click();
+
+		browser.sleep(1000);
+
+		expect(navBar.wolverineModalTitle.isDisplayed()).toBe(true);
+		expect(navBar.wolverineModalTitle.getText()).toEqual('Wolverine Fact');
+		expect(navBar.wolverineModalBody.isDisplayed()).toBe(true);
+		expect(navBar.wolverineModalBody.getText()).toEqual('Wolverine made his first comic book appearance in 1974.');
+		expect(navBar.wolverineModalCloseButton.isDisplayed()).toBe(true);
+		expect(navBar.modalXButton.isPresent()).toBeTruthy();
+
+	})
+
+	it('should display and close spider-man modal', function() {
+
+		loginPage.emailField.sendKeys('stan_lee@marvel.com');
+		loginPage.passwordField.sendKeys('spiderman');
+		loginPage.submitButton.click();
+
+		navBar.heroFactsLink.click();
+		navBar.spidermanOption.click();
+
+		browser.sleep(1000);
+
+		expect(navBar.spidermanModalTitle.isDisplayed()).toBe(true);
+		expect(navBar.spidermanModalTitle.getText()).toEqual('Spider-Man Fact');
+		expect(navBar.spidermanModalBody.isDisplayed()).toBe(true);
+		expect(navBar.spidermanModalBody.getText()).toEqual('Spider-Man was created by Stan Lee and Steve Ditko and first appeared in 1962.');
+		expect(navBar.spidermanModalCloseButton.isDisplayed()).toBe(true);
+		expect(navBar.modalXButton.isPresent()).toBeTruthy();
+
+	})
+
+	// Confirm Logout Link
 	it('should display Login page without email and password', function() {
 
 		loginPage.emailField.sendKeys('stan_lee@marvel.com');
@@ -42,7 +101,7 @@ describe('NavBar', function() {
 
 	})
 
-	fit('should display Login page with email and password', function() {
+	it('should display Login page with email and password', function() {
 
 		loginPage.emailField.sendKeys('stan_lee@marvel.com');
 		loginPage.passwordField.sendKeys('spiderman');
@@ -53,8 +112,10 @@ describe('NavBar', function() {
 
 		expect(loginPage.emailField.getAttribute('value')).toEqual('stan_lee@marvel.com');
 		expect(loginPage.passwordField.getAttribute('value')).toEqual('spiderman');
-		expect(loginPage.rememberMeCheckbox.isSelected()).toBe(false);
+		expect(loginPage.rememberMeCheckbox.isSelected()).toBe(true);
 		
 	})
+
+	// Search bar
 
 })
