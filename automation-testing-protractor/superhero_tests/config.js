@@ -77,10 +77,11 @@ exports.config = {
 
 	specs: [
 		
+		//./tests/*_spec.js'
 		'./tests/login_spec.js',
-		'./tests/navbar_spec.js',
-		'./tests/home_spec.js'
-	
+		'./tests/home_spec.js',
+		'./tests/navbar_spec.js'
+
 	]
 
 }
