@@ -28,7 +28,7 @@ describe('Home Page', function() {
 	})
 
 	// Header Section
-	fit('should display all Home Page Header elements', function() {
+	it('should display all Home Page Header elements', function() {
 
 		loginPage.emailField.sendKeys('stan_lee@marvel.com')
 		loginPage.passwordField.sendKeys('spiderman')
