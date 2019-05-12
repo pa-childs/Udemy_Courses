@@ -5,5 +5,8 @@ exports.config = {
       'browserName': 'chrome'
       // 'browserName': 'firefox'
   },
-  specs: ['./tests/example-spec.js']
+  specs: [
+            './tests/banking-spec.js'
+            // './tests/example-spec.js'
+         ]
 };
