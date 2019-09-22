@@ -12,9 +12,11 @@ puts
 
 end
 
+# Loop that shows first ten multiples of 3
 number = 10
 number.times { |count| puts 3 * (count + 1)}
 
+# Using Do and End format
 # 10.times do |count|
 #
 #   puts 3 * (count + 1)

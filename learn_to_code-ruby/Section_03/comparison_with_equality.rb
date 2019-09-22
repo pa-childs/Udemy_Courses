@@ -15,5 +15,8 @@ puts 5 == 5
 puts "5" == "5"
 puts
 
+# Comparing integer to float works
 puts 5 == 5.0
-puts 5.to_f == 5.0
+
+# Best to compare same classes though
+puts 5 == 5.0.to_i
