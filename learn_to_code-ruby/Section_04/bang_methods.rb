@@ -1,11 +1,11 @@
 word = "hello"
 
-# Doesn't save change to variable
-puts word.capitalize
+# Methods doesn't save change to variable
+puts word.capitalize()
 puts word
 puts
 
-# Saves change to the variable
+# Bang methods do save change to the variable
 puts word.capitalize!
 puts word
 puts

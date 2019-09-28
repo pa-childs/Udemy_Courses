@@ -18,5 +18,9 @@ puts
 puts name.class
 puts
 
+new_string = String.new("Create a new string")
+puts new_string
+puts
+
 puts 5.to_s
 puts 5.to_s.class

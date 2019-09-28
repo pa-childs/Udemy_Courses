@@ -1,4 +1,6 @@
-puts "Ruby".reverse
-puts "1234".reverse
+# Reverses all characters in a string
+puts "Ruby".reverse()
+puts "1234".reverse()
 
-puts "Ruby is a computer language".upcase.reverse
+# Method chaining works casue each method returns an object
+puts "Ruby is a computer language".upcase().reverse()

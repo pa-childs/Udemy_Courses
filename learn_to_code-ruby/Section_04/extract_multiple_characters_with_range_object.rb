@@ -12,6 +12,9 @@ puts
 
 # no error if 2nd index doesn't exist
 puts story[27..100]
+puts story.slice(27..100)
+puts
 
 # can mix positive and negative indexes
-puts story[25..-7]
+puts story[27..-4]
+puts story.slice(27..-4)
