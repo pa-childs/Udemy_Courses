@@ -6,5 +6,6 @@ p number
 p numbers
 puts
 
+# Unshift addes to front of array
 numbers.unshift("a")
 p numbers
