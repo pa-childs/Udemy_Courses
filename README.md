@@ -1,7 +1,7 @@
 # Udemy Courses
 
 #### Learn to Code with Ruby
-28% Completed
+52% Completed
 
 Teaches Ruby for Beginners
 
